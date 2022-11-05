@@ -40,7 +40,7 @@ class TestIdentifyPalindrome(unittest.TestCase):
         """
         
         with self.assertRaises(Exception):
-            answer = is_palindrome("Toy")
+            answer = is_palindrome("Toy23")
         
 if __name__ == "__main__":
     unittest.main()
