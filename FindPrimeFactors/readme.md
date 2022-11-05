@@ -2,7 +2,7 @@
 Find prime factors of a given number
 
 ## Sample Test Cases
-> find_prime_number(13)
+> find_prime_numbers(13)
   => [13]
 
 > find_prime_numbers(630)
