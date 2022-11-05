@@ -1,13 +1,10 @@
 def is_palindrome(string):
-    if not string.isalpha():
-        raise Exception("Invalid String entered. Use A-z, a-z")
-
-    lowercase_string = string.lower()
+    test_string = [char.lower() for char in string if char.isalpha()]
 
     start = 0
-    end = len(lowercase_string) - 1
+    end = len(test_string) - 1
     while start < end:
-        if(lowercase_string[start] != lowercase_string[end]):
+        if(test_string[start] != test_string[end]):
             return False
         start += 1
         end -= 1
