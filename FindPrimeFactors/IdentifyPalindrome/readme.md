@@ -8,7 +8,7 @@ String
 Boolean value
 
 ### Constraints
-- Only consider letters (A-Z)
+- Only consider letters (A-Z, a-z)
 - Ignore case (for example, 'A' == 'a')
 
 ### Test Cases
