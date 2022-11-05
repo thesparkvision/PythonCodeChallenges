@@ -1,6 +1,7 @@
 from random import randint
 from datetime import datetime
 from dataclasses import dataclass
+import time
 
 @dataclass
 class WaitingGameResponse:
@@ -26,7 +27,7 @@ def waiting_game(expected_waiting_time, actual_waiting_time) -> WaitingGameRespo
 
     return WaitingGameResponse(elasped_time, actual_waiting_time ,game_response)
 
-if __name__ == "__main__":
+def waiting_game_personal():
     expected_waiting_time = randint(2,4)
     print(f"Your target time is {expected_waiting_time} seconds.")
     
@@ -40,3 +41,20 @@ if __name__ == "__main__":
     print(f"You are {answer.game_message}. \
             \n Waiting Time: {abs(answer.time_taken)} seconds \
              \n Elasped Time: {answer.time_difference} seconds")
+
+def waiting_game_official_solution():
+    expected_waiting_time = randint(2,4)
+    print(f"Your target time is {expected_waiting_time} seconds.")
+    
+    starting_time = time.perf_counter()
+    enter_input = input("--- Press Enter to Begin")
+    ending_time = time.perf_counter()
+    actual_waiting_time = ending_time - starting_time
+    
+    answer = waiting_game(expected_waiting_time, actual_waiting_time)
+    print(f"You are {answer.game_message}. \
+            \n Waiting Time: {abs(answer.time_taken)} seconds \
+             \n Elasped Time: {answer.time_difference} seconds")
+
+if __name__ == "__main__":
+    waiting_game_official_solution()
