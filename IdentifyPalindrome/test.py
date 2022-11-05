@@ -34,13 +34,19 @@ class TestIdentifyPalindrome(unittest.TestCase):
         answer = is_palindrome("Toy")
         self.assertFalse(answer)
 
-    def test_invalid_character_exception(self):
+    def test_extra_character_false_palindrome(self):
         """
-        Test if on entering invalid character, the function throws exception or not
+        Test if a false palindrome with extra characters is identified
         """
+        answer = is_palindrome("hello world")
+        self.assertFalse(answer)
         
-        with self.assertRaises(Exception):
-            answer = is_palindrome("Toy23")
-        
+    def test_extra_character_palindrome(self):
+        """
+        Test if a true palindrome with extra characters is identified
+        """
+        answer = is_palindrome("Go hang a salami - I'm a lasagna hog.")
+        self.assertTrue(answer)
+
 if __name__ == "__main__":
     unittest.main()
