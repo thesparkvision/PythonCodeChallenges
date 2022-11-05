@@ -8,7 +8,7 @@ String
 Boolean value
 
 ### Constraints
-- Only consider letters (A-Z, a-z)
+- Only consider letters (A-Z, a-z) that means it can have extra characters
 - Ignore case (for example, 'A' == 'a')
 
 ### Test Cases
@@ -22,4 +22,10 @@ Boolean value
   => False
   
 > is_palindrome("Racecar")
+  => True
+
+> is_palindrome("hello world")
+  => False
+
+> is_palindrome("Go hang a salami - I'm a lasagna hog.")
   => True
