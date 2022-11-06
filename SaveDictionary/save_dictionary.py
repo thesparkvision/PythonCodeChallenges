@@ -2,27 +2,35 @@ from dataclasses import dataclass
 
 @dataclass
 class OperationResponse:
-    data: object
     status: str
-    error: str
+    data: object = None
+    error: str = ""
 
 def load_dictionary(file_path: str) -> OperationResponse:
     pass
 
 def save_dictionary(dictionary: dict, file_path: str) -> OperationResponse:
-    pass
+    try:
+        with open(file_path, "w") as file:
+            file.write(str(dictionary))
+            return OperationResponse(status="Success")
+    except Exception as e:
+        return OperationResponse(status="Failure", error=str(e))    
 
 def run_dictionary_save_interactions():
     user_input = eval(input())
+
+    if type(user_input) != dict:
+        print("Input is not a valid dictionary!")
+        return
+    
     file_path = input()
 
-    if type(user_input) != "dict":
-        print("Input is not a valid dictionary!")
-
-    save_response = save_dictionary(dictionary, file_path)
+    save_response = save_dictionary(user_input, file_path)
     print(f"Dictionary Save Status: {save_response.status}")
 
     if save_response.status == "Failure":
+        print(f"Reason: {save_response.error}")
         return
 
     load_response = load_dictionary(file_path)
