@@ -7,7 +7,6 @@ def load_dictionary(file_path: str) -> OperationResponse:
             dictionary = eval(file.read())
             return OperationResponse(status=OperationStatus.SUCCESS, data = dictionary)
     except Exception as e:
-        print(e,"check")
         return OperationResponse(status=OperationStatus.ERROR, error = str(e))
 
 def save_dictionary(dictionary: dict, file_path: str) -> OperationResponse:
@@ -32,5 +31,4 @@ def load_dictionary_best_way(file_path: str) -> OperationResponse:
             dictionary = pickle.load(file)
             return OperationResponse(status=OperationStatus.SUCCESS, data = dictionary)
     except Exception as e:
-        print(e,"check")
         return OperationResponse(status=OperationStatus.ERROR, error = str(e))
