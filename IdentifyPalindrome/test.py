@@ -1,6 +1,7 @@
 from .identify_palindrome import is_palindrome
 import unittest
 
+
 class TestIdentifyPalindrome(unittest.TestCase):
 
     def test_multi_letter_palindrome(self):
@@ -40,13 +41,14 @@ class TestIdentifyPalindrome(unittest.TestCase):
         """
         answer = is_palindrome("hello world")
         self.assertFalse(answer)
-        
+
     def test_extra_character_palindrome(self):
         """
         Test if a true palindrome with extra characters is identified
         """
         answer = is_palindrome("Go hang a salami - I'm a lasagna hog.")
         self.assertTrue(answer)
+
 
 if __name__ == "__main__":
     unittest.main()
