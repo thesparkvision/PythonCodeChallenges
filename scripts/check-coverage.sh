@@ -1,3 +1,3 @@
 #!/bin/bash
-echo $PATH
+python -m unittest --verbose
 python -m coverage report
