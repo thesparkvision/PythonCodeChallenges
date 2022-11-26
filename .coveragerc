@@ -5,4 +5,4 @@ fail_under = 70
 
 [run]
 parallel = True
-include = ./challenges/*
+include = challenges/*
