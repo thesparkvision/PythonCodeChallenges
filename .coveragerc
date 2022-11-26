@@ -1,7 +1,7 @@
 [report]
 
 exclude_lines = if __name__ == .__main__.:
-fail_under = 70
+fail_under = 90
 
 [run]
 parallel = True
