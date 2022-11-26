@@ -1,3 +1,2 @@
 #!/bin/bash
-python -m unittest --verbose
-python -m coverage report
+python -m coverage report -m
