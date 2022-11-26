@@ -11,7 +11,7 @@ class TestIdentifyPalindrome(unittest.TestCase):
         answer = is_palindrome("racecar")
         self.assertTrue(answer)
 
-    def test_multi_letter_palindrome(self):
+    def test_single_letter_palindrome(self):
         """
         Test if a palindrome with single letter is identified
         """
