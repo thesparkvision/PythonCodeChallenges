@@ -1,4 +1,4 @@
-from prime_factors import find_prime_factors
+from .prime_factors import find_prime_factors
 import unittest
 
 class TestPrimeFactors(unittest.TestCase):

@@ -1,4 +1,4 @@
-from sort_a_string import sort_string
+from .sort_a_string import sort_string
 import unittest
 
 class TestIdentifyPalindrome(unittest.TestCase):

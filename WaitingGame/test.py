@@ -1,4 +1,4 @@
-from play_waiting_game import waiting_game, WaitingGameResponse
+from .play_waiting_game import waiting_game, WaitingGameResponse
 import unittest
 
 class TestWaitingGame(unittest.TestCase):
