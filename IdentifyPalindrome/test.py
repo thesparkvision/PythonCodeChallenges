@@ -1,4 +1,4 @@
-from identify_palindrome import is_palindrome
+from .identify_palindrome import is_palindrome
 import unittest
 
 class TestIdentifyPalindrome(unittest.TestCase):
