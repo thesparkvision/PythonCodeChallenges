@@ -10,6 +10,7 @@ def find_prime_factors(number):
 
     return prime_factors
 
+
 if __name__ == "__main__":
     number = int(input("Enter number: "))
     prime_factors = find_prime_factors(number)

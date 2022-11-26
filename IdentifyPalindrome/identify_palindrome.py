@@ -4,12 +4,13 @@ def is_palindrome(string):
     start = 0
     end = len(test_string) - 1
     while start < end:
-        if(test_string[start] != test_string[end]):
+        if (test_string[start] != test_string[end]):
             return False
         start += 1
         end -= 1
 
     return True
+
 
 if __name__ == "__main__":
     string = input("Enter string (A-z, a-z): ")

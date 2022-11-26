@@ -1,11 +1,13 @@
-from save_dictionary import save_dictionary, load_dictionary, save_dictionary_best_way, load_dictionary_best_way
-from models import OperationResponse, OperationStatus
+from save_dictionary import save_dictionary_best_way, load_dictionary_best_way
+# from save_dictionary import save_dictionary, load_dictionary
+from models import OperationStatus
+# from models import OperationResponse
 
 
 def run_dictionary_save_interactions():
     user_input = eval(input("Enter dictionary data: "))
 
-    if type(user_input) != dict:
+    if not isinstance(user_input, dict):
         print("Input is not a valid dictionary!")
         return
 
